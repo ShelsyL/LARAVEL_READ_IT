@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// ROUTE PAR DEFAUT
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+use App\Http\Controllers\PostsController;
+Route::get('/posts', [PostsController::class, 'index']);
