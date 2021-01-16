@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Intro
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
@@ -13,6 +13,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
+  ---------------------------------------------------------------------------
+  VIEW COMPOSERS :
+  pour mettre des données à disposition de certaines vues
+  ---------------------------------------------------------------------------
+*/
+// CATEGORIES
+  View::composer('categories._index', function($view){
+  $view->with('categories', App\Models\Categorie::orderBy('name', 'asc')->get());
+  });
+
+  // TAGS
+  View::composer('tags._index', function($view){
+  $view->with('tags', App\Models\Categorie::orderBy('name', 'asc')->get());
+  });
+/*
+  ---------------------------------------------------------------------------
+  ROUTES
+  ---------------------------------------------------------------------------
+*/
 // ROUTE PAR DEFAUT
 Route::get('/', function () {
     return view('welcome');

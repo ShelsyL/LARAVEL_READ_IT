@@ -25,6 +25,7 @@
             </div>
           </div>
         </div>
+        
         <div class="col-md-6 d-flex ftco-animate">
           <div class="blog-entry justify-content-end">
             <a href="article.html" class="block-20" style="background-image: url('images/image_2.jpg');">
@@ -45,6 +46,7 @@
             </div>
           </div>
         </div>
+
         <div class="col-md-6 d-flex ftco-animate">
           <div class="blog-entry justify-content-end">
             <a href="article.html" class="block-20" style="background-image: url('images/image_3.jpg');">
